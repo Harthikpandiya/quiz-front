@@ -110,8 +110,7 @@ const LeaderboardPage = () => {
   const currentUserEmail = location.state?.email;
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/results/leaderboard")
+  axios.get("https://quiz-backend-2j9k.onrender.com/api/results/leaderboard")
       .then((res) => {
         setResults(res.data);
       })
@@ -124,7 +123,7 @@ const LeaderboardPage = () => {
 
   const sendEmail = async (entry) => {
     try {
-      await axios.post("http://localhost:5000/api/results/send-email", {
+      await axios.post("https://quiz-backend-2j9k.onrender.com/api/results/send-email", {
         name: entry.name,
         email: entry.email,
         totalTime: entry.totalTime,

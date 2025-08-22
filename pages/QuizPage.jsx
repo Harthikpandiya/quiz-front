@@ -36,7 +36,7 @@ const QuizPage = () => {
 
 
       try {
-        await axios.post("http://localhost:5000/api/results/submit", {
+       await axios.post("https://quiz-backend-2j9k.onrender.com/api/results/submit", {
           name,
           email,
           totalTime,
